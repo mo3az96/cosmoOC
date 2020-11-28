@@ -1428,7 +1428,7 @@ html[dir='ltr'] .header-setting .setting-anchor img {
   color: var(--secondery-color);
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .header-setting:hover .setting-anchor {
     color: var(--secondery-color);
   }
@@ -2018,6 +2018,7 @@ html[dir='rtl'] .arrow-top {
   top: 25px;
   font-size: 24px;
   color: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 
 html[dir='ltr'] .menu-close {
@@ -2026,6 +2027,24 @@ html[dir='ltr'] .menu-close {
 
 html[dir='rtl'] .menu-close {
   left: 15px;
+}
+
+nav .header-settings {
+  position: absolute;
+  top: 25px;
+  display: none;
+}
+
+nav .header-settings .setting-anchor {
+  line-height: 20px;
+}
+
+html[dir='ltr'] nav .header-settings {
+  left: 15px;
+}
+
+html[dir='rtl'] nav .header-settings {
+  right: 15px;
 }
 
 @media (max-width: 767px) {
@@ -2043,6 +2062,14 @@ html[dir='rtl'] .menu-close {
     display: block;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+  }
+  nav .header-settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .menu-close {
+    display: block;
   }
   html[dir='rtl'] nav {
     right: -400px;
