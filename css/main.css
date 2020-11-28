@@ -2031,7 +2031,7 @@ html[dir='rtl'] .menu-close {
 
 nav .header-settings {
   position: absolute;
-  top: 25px;
+  top: 15px;
   display: none;
 }
 
@@ -2041,10 +2041,12 @@ nav .header-settings .setting-anchor {
 
 html[dir='ltr'] nav .header-settings {
   left: 15px;
+  text-align: left;
 }
 
 html[dir='rtl'] nav .header-settings {
   right: 15px;
+  text-align: right;
 }
 
 @media (max-width: 767px) {
