@@ -2103,22 +2103,22 @@ html[dir='rtl'] .pay {
   }
 }
 
-html[dir='ltr'] .arrow-top {
+html[dir='rtl'] .arrow-top {
   left: 60px;
 }
 
 @media (max-width: 767px) {
-  html[dir='ltr'] .arrow-top {
+  html[dir='rtl'] .arrow-top {
     left: 20px;
   }
 }
 
-html[dir='rtl'] .arrow-top {
+html[dir='ltr'] .arrow-top {
   right: 60px;
 }
 
 @media (max-width: 767px) {
-  html[dir='rtl'] .arrow-top {
+  html[dir='ltr'] .arrow-top {
     right: 20px;
   }
 }

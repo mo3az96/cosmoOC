@@ -177,7 +177,7 @@ footer {
         bottom: 40px;
     }
 
-    html[dir='ltr'] & {
+    html[dir='rtl'] & {
         left: 60px;
 
         @include xs {
@@ -185,7 +185,7 @@ footer {
         }
     }
 
-    html[dir='rtl'] & {
+    html[dir='ltr'] & {
         right: 60px;
 
         @include xs {
