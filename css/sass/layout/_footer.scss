@@ -173,11 +173,15 @@ footer {
     bottom: 80px;
     z-index: 9;
 
+    @include xs {
+        bottom: 40px;
+    }
+
     html[dir='ltr'] & {
         left: 60px;
 
         @include xs {
-            left: 9px;
+            left: 20px;
         }
     }
 
@@ -185,7 +189,7 @@ footer {
         right: 60px;
 
         @include xs {
-            right: 9px;
+            right: 20px;
         }
     }
 

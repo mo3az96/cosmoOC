@@ -7,6 +7,19 @@ $(window).on('load', function () {
     $(".mo-modal").addClass("mo-modal-in");
 });
 $(document).ready(function () {
+    //////////** main slider **//////////
+    var mainswiper = new Swiper('.main-slider .swiper-container', {
+        spaceBetween: 10,
+        loop: true,
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: '.main-slider .swiper-pagination',
+            clickable: true,
+        },
+    });
     ///////// **modal** /////////
     $('.mo-modal-overlay').click(function () {
         $(".mo-modal-overlay").fadeOut(400);

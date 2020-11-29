@@ -17,7 +17,7 @@
 nav {
     .header-settings {
         position: absolute;
-        top: 15px;
+        top: 25px;
         display: none;
 
         .setting-anchor {
@@ -25,13 +25,26 @@ nav {
         }
 
         html[dir='ltr'] & {
-            left: 15px;
-            text-align: left;
+            left: 17px;
         }
 
         html[dir='rtl'] & {
-            right: 15px;
-            text-align: right;
+            right: 17px;
+        }
+
+        .header-dropDown {
+            transform: none;
+            left: auto;
+
+            html[dir='ltr'] & {
+                text-align: left;
+                left: -15px;
+            }
+
+            html[dir='rtl'] & {
+                text-align: right;
+                right: -15px;
+            }
         }
     }
 }

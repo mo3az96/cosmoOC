@@ -1,3 +1,11 @@
+.main-slider-sec {
+    margin-top: 20px;
+
+    @include sm {
+        margin-top: 7px;
+    }
+}
+
 .banner {
     position: relative;
     display: block;
@@ -45,6 +53,30 @@
     @include sm {
         gap: 0 7px;
     }
+
+    @include xs {
+        grid-template-columns: 1fr 1fr;
+
+        .banner-item {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+.banner-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+
+    @include sm {
+        gap: 0 7px;
+    }
+
+    @include xs {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .banner-2 {
@@ -59,4 +91,14 @@
 
 .banner-item {
     max-width: 100%;
+
+    @include xs {
+        &:nth-child(3) {
+            order: 2;
+        }
+
+        &:nth-child(6) {
+            order: 3;
+        }
+    }
 }
