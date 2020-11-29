@@ -1,0 +1,42 @@
+.sec-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include sm {
+        margin-bottom: 15px;
+    }
+}
+
+.sec-title {
+    font-size: 24px;
+    color: $text;
+    font-weight: 600;
+}
+
+.show-all {
+    font-size: 16px;
+    color: $text;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $sec;
+    }
+}
+
+.products-slider-sec {
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    @include sm {
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+}
+
+.product {
+    background-color: #fff;
+}

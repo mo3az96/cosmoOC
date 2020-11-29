@@ -1,0 +1,170 @@
+.search-cont {
+    @include sm {
+        position: absolute;
+        top: calc(100% + 2px);
+        z-index: 99;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+}
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 98;
+    display: none;
+}
+
+.search-form {
+    position: relative;
+
+    html[dir='ltr'] & {
+        margin-right: 28px;
+
+        @include sm {
+            margin: 0;
+        }
+    }
+
+    html[dir='rtl'] & {
+        margin-left: 28px;
+
+        @include sm {
+            margin: 0;
+        }
+    }
+}
+
+.search-input {
+    border-radius: 3px;
+    height: 45px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text;
+    padding: 0 20px;
+    width: 475px;
+    max-width: 100%;
+
+    @include md {
+        width: 275px;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+
+    html[dir='ltr'] & {
+        padding-right: 45px;
+        text-align: left;
+    }
+
+    html[dir='rtl'] & {
+        padding-left: 45px;
+        text-align: right;
+    }
+
+    &::placeholder {
+        color: #808080;
+    }
+}
+
+.search-button {
+    font-size: 20px;
+    color: $text;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $sec;
+    }
+
+    html[dir='ltr'] & {
+        right: 15px;
+    }
+
+    html[dir='rtl'] & {
+        left: 15px;
+    }
+}
+
+
+.newsletter-form {
+    position: relative;
+}
+
+.newsletter-input {
+    background-color: #fff;
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    padding: 0 19px;
+    font-size: 14px;
+    color: $text;
+    border: 1px solid #ebebeb;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: #8f8e8e;
+    }
+
+    &:focus {
+        border-color: $sec;
+    }
+
+    html[dir='ltr'] & {
+        text-align: left;
+    }
+
+    html[dir='rtl'] & {
+        text-align: right;
+    }
+}
+
+
+
+
+.newsletter-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    html[dir='ltr'] & {
+        right: 19px;
+    }
+
+    html[dir='rtl'] & {
+        left: 19px;
+    }
+
+    &:after {
+        font-family: 'Linearicons-Free';
+
+        html[dir='ltr'] & {
+            content: "\e87a";
+        }
+
+        html[dir='rtl'] & {
+            content: "\e879";
+        }
+    }
+
+    &:hover {
+        color: $sec;
+    }
+}

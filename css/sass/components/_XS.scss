@@ -1,0 +1,163 @@
+.menu-close {
+    position: absolute;
+    top: 25px;
+    font-size: 24px;
+    color: rgba(#000, 0.7);
+    display: none;
+
+    html[dir='ltr'] & {
+        right: 15px;
+    }
+
+    html[dir='rtl'] & {
+        left: 15px;
+    }
+}
+
+nav {
+    .header-settings {
+        position: absolute;
+        top: 15px;
+        display: none;
+
+        .setting-anchor {
+            line-height: 20px;
+        }
+
+        html[dir='ltr'] & {
+            left: 15px;
+            text-align: left;
+        }
+
+        html[dir='rtl'] & {
+            right: 15px;
+            text-align: right;
+        }
+    }
+}
+
+
+@include xs {
+    nav {
+        .header-settings {
+            display: flex;
+        }
+
+        .menu-close {
+            display: block;
+        }
+
+        background-color: #f7f7f7;
+        width: 300px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding: 60px 0 40px;
+        z-index: 999999;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        display: block;
+        transition: all 0.5s ease-in-out;
+
+        html[dir='rtl'] & {
+            right: -400px;
+        }
+
+        html[dir='ltr'] & {
+            left: -400px;
+        }
+
+        &.nav-in {
+            html[dir='ltr'] & {
+                left: -0;
+            }
+
+            html[dir='rtl'] & {
+                right: 0;
+            }
+        }
+
+        .mo-navbar {
+            width: 100%;
+            padding-top: 0;
+        }
+
+        .level-2 {
+            position: relative;
+            top: auto;
+            min-height: auto;
+            visibility: visible;
+            opacity: 1;
+            padding-top: 0;
+            transition: none;
+            display: none;
+
+            html[dir='ltr'] & {
+                left: auto;
+            }
+
+            html[dir='rtl'] & {
+                right: auto;
+            }
+
+            .nav-a {
+                padding: 0 35px;
+            }
+        }
+
+        .level-3 {
+            position: relative;
+            top: auto;
+            min-height: auto;
+            visibility: visible;
+            opacity: 1;
+            padding-top: 0;
+            transition: none;
+            display: none;
+
+            html[dir='ltr'] & {
+                left: auto;
+            }
+
+            html[dir='rtl'] & {
+                right: auto;
+            }
+
+            .nav-a {
+                padding: 0 50px;
+            }
+        }
+
+        .nav-li {
+            width: 100%;
+
+            &.level-2-btn,
+            &.level-3-btn {
+                >.nav-a {
+                    &::after {
+                        html[dir='rtl'] & {
+                            content: "\e874";
+                        }
+
+                        html[dir='ltr'] & {
+                            content: "\e874";
+                        }
+                    }
+
+                    &.active {
+                        background-color: #fff;
+
+                        &:after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-overlay {
+        z-index: 99999;
+    }
+}

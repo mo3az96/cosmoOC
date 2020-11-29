@@ -1006,6 +1006,13 @@ html[dir='ltr'] .mo-modal-close {
 @media (max-width: 767px) {
   .mo-modal-img {
     width: 100%;
+    height: 220px;
+  }
+  .mo-modal-img img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
