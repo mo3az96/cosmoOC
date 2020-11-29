@@ -38,12 +38,12 @@ nav {
 
             html[dir='ltr'] & {
                 text-align: left;
-                left: -15px;
+                left: -0;
             }
 
             html[dir='rtl'] & {
                 text-align: right;
-                right: -15px;
+                right: -0;
             }
         }
     }

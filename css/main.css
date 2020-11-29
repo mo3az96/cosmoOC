@@ -2178,12 +2178,12 @@ nav .header-settings .header-dropDown {
 
 html[dir='ltr'] nav .header-settings .header-dropDown {
   text-align: left;
-  left: -15px;
+  left: -0;
 }
 
 html[dir='rtl'] nav .header-settings .header-dropDown {
   text-align: right;
-  right: -15px;
+  right: -0;
 }
 
 @media (max-width: 767px) {
