@@ -12,9 +12,9 @@ $(document).ready(function () {
         spaceBetween: 10,
         loop: true,
         speed: 500,
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         pagination: {
             el: '.main-slider .swiper-pagination',
             clickable: true,

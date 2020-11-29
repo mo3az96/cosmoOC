@@ -543,6 +543,19 @@ html[dir='ltr'] .nav-li.level-2-btn > .nav-a::after, html[dir='ltr'] .nav-li.lev
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .main-slider .slider-img {
+    height: 150px;
+  }
+}
+
+.main-slider .slider-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .main-slider img {
   min-width: 100%;
 }
